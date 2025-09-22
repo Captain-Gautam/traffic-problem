@@ -6,15 +6,51 @@ endobj
 << /Type /Pages /Kids [3 0 R] /Count 1 >>
 endobj
 3 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 200 200] /Resources << /Font << /F1 4 0 R >> >> /Contents 4 0 R >>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R >> >> /Contents 4 0 R >>
 endobj
 4 0 obj
-<< /Length 44 >>
+<< /Length 1234 >>
 stream
 BT
-/F1 24 Tf
-50 150 Td
-(Hello PDF) Tj
+/F1 12 Tf
+50 740 Td
+(CSE 518 - Homework 2 Solutions) Tj
+0 -14 Td
+(2.1 - An agent perceives its environment through sensors and acts via actuators.) Tj
+0 -14 Td
+(The environment is everything external to the agent that it interacts with.) Tj
+0 -14 Td
+(Examples: self driving car, chess program.) Tj
+0 -14 Td
+(2.2 - Evolution shapes priors and innate mechanisms across generations.) Tj
+0 -14 Td
+(Autonomy and intelligence can arise as evolved capacities for decision making.) Tj
+0 -14 Td
+(Learning provides within lifetime plasticity.) Tj
+0 -14 Td
+(2.3 - PEAS for taxi driving: Performance safety timely arrival comfort fuel efficiency.) Tj
+0 -14 Td
+(Environment: road network, traffic, weather, pedestrians.) Tj
+0 -14 Td
+(Actuators: steering, throttle, brakes, indicators.) Tj
+0 -14 Td
+(Sensors: GPS, cameras, lidar, radar, speedometer, passenger inputs.) Tj
+0 -14 Td
+(2.4 - Classic vacuum world with deterministic actions and exact sensors is deterministic and fully observable.) Tj
+0 -14 Td
+(It can be episodic or sequential and may be static or dynamic.) Tj
+0 -14 Td
+(2.5 - Agent types: simple reflex, model based reflex, goal based, utility based, learning agents.) Tj
+0 -14 Td
+(2.6 - Rational vacuum agent: maintain map, clean if dirty, else move to nearest known dirty.) Tj
+0 -14 Td
+(2.7 - Use belief states and update with observations; explore or use POMDP planning.) Tj
+0 -14 Td
+(2.8 - BFS optimal memory heavy, DFS low memory may miss shortest paths, A star with admissible heuristic is typically best.) Tj
+0 -14 Td
+(2.9 - Unknown geography: map and frontier based exploration; TD often learns faster than sample averages.) Tj
+0 -14 Td
+(2.10 - Passive learning evaluates a fixed policy. Direct utility estimation averages returns and is slower. TD updates online and typically converges faster.) Tj
 ET
 endstream
 endobj
@@ -24,13 +60,13 @@ endobj
 xref
 0 6
 0000000000 65535 f 
-0000000009 00000 n 
-0000000058 00000 n 
-0000000115 00000 n 
-0000000241 00000 n 
-0000000331 00000 n 
+0000000010 00000 n 
+0000000060 00000 n 
+0000000120 00000 n 
+0000000300 00000 n 
+0000000500 00000 n 
 trailer
 << /Root 1 0 R /Size 6 >>
 startxref
-401
+600
 %%EOF
