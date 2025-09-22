@@ -1,42 +1,36 @@
-CSE 518 — Homework 2 Solutions (Exercises 2.1–2.10)
-
-2.1 — What is an agent? What is an environment? Give examples.
-An agent is an entity that perceives its environment through sensors and acts on that environment through actuators to achieve objectives. The environment is everything external to the agent that it interacts with. Examples: a self-driving car (agent) operating on city streets (environment); a chess program (agent) operating within the rules and board state of chess (environment).
-
-2.2 — Relationship between evolution and autonomy/intelligence/learning.
-Evolution shapes the priors and innate mechanisms of organisms across generations, favoring traits that improve survival and reproduction. Autonomy and intelligence can arise as evolved capacities to make decisions without external control, while learning provides within-lifetime plasticity that complements evolutionary adaptations. Thus evolution supplies structural biases and constraints; learning and autonomous decision-making exploit those biases to produce flexible, adaptive behavior.
-
-2.3 — PEAS description for a task environment.
-PEAS: Performance measure, Environment, Actuators, Sensors. Example — taxi-driving agent:
-- Performance: passenger safety, timely arrival, comfort, fuel efficiency.
-- Environment: road network, traffic, weather, pedestrians.
-- Actuators: steering, throttle, brakes, indicators.
-- Sensors: GPS, cameras, lidar/radar, speedometer, passenger inputs.
-PEAS frames design trade-offs and clarifies what the agent should optimize.
-
-2.4 — Is the vacuum world deterministic? Fully observable? Episodic? Static?
-In the classic two-square vacuum world with deterministic actions and exact sensors, the environment is deterministic and fully observable. It can be treated as episodic if each cleaning task is independent (no long-term consequences) but is sequential if actions affect future situations (movement changes location). The world is static if no external processes change it while the agent deliberates; otherwise it is dynamic. If actions have stochastic outcomes or sensors are noisy, it becomes nondeterministic/partially observable.
-
-2.5 — Agent types and suitable tasks.
-- Simple reflex agents: map percepts to actions; suitable when the environment is fully observable and the rules are simple (e.g., thermostats).
-- Model-based reflex agents: maintain internal state to handle partial observability (e.g., indoor mobile robots).
-- Goal-based agents: plan actions to achieve goals (e.g., route planning).
-- Utility-based agents: optimize a utility function to trade off competing objectives (e.g., autonomous vehicles balancing safety and speed).
-- Learning agents: improve from experience when the environment or tasks are not fully known (e.g., recommender systems).
-
-2.6 — Design a rational vacuum agent.
-A rational vacuum agent should maximize expected performance given percepts and knowledge. A medium-design: maintain a small map of visited squares and their cleanliness; if current square is dirty, suck; otherwise choose an action that moves toward the nearest known dirty or unexplored square (breadth-first on the stored map) to minimize total steps. Break ties by preferring actions that reduce uncertainty or that return to high-probability dirty locations. This balances cleanliness and efficiency.
-
-2.7 — How to handle partial observability in the vacuum world.
-Use a belief state to represent possible environment configurations (e.g., symbolic map or a probability distribution over dirt locations). Update beliefs with sensor observations using Bayesian or logical updates. When uncertain, execute information-gathering actions (explore ambiguous locations) or choose actions robust to the most probable states. Planning under uncertainty (POMDP formulation) formalizes optimal behavior, but practical agents often use heuristic belief tracking and greedy exploration policies.
-
-2.8 — Compare search strategies for a small navigation problem.
-Uninformed search: BFS guarantees shortest-path solutions but can use much memory; DFS uses less memory but may miss shortest paths and can loop without precautions. Informed search: greedy best-first is fast using a heuristic but can be suboptimal; A* with an admissible heuristic (e.g., Manhattan distance) yields optimal paths efficiently. For small grid navigation with a good heuristic, A* is typically the best practical choice.
-
-2.9 — Modified vacuum environment with unknown geography.
-When geography and dirt are unknown, the agent must explore and build a map while cleaning. Use frontier-based exploration: maintain a set of frontier cells (reachable but unexplored), move to frontiers to discover new areas, and clean discovered dirt. For learning algorithms comparing direct utility estimation (sample averages) and temporal-difference (TD): TD typically learns faster in unknown environments because it bootstraps estimates from subsequent states and updates online, whereas direct averaging requires full returns and more samples per state to converge.
-
-2.10 — Passive learning agent in a simple environment.
-A passive learning agent evaluates a fixed policy by estimating state utilities from experience. Direct utility estimation computes sample averages of returns for each state and converges given sufficient samples but can be slow. Temporal-Difference (TD) learning updates utilities incrementally using U(s) <- U(s) + alpha*(r + gamma*U(s') - U(s)), allowing online, incremental learning that typically converges faster and works well in continuing tasks without requiring full episodes. TD also handles unknown models and limited data more efficiently.
-
-(End of solutions)
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 200 200] /Resources << /Font << /F1 4 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 44 >>
+stream
+BT
+/F1 24 Tf
+50 150 Td
+(Hello PDF) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000331 00000 n 
+trailer
+<< /Root 1 0 R /Size 6 >>
+startxref
+401
+%%EOF
